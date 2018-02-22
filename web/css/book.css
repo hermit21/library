@@ -1,0 +1,37 @@
+body{
+  background: -webkit-linear-gradient(0deg, #434343, #abc);
+}
+#container{
+  width: 550px;
+  height: auto;
+  background: #eee;
+  margin: 0 auto;
+}
+.table{
+  margin-top: 40px;
+  width: 550px;
+  border: #abc;
+  box-shadow: 1px 1px 1px silver;
+  text-align: center;
+}
+table th{
+  width: 25%;
+  text-align: center;
+  padding: 6px 10px;
+  font-weight: bold;
+  font-size: 20px;
+  border-right: 2px solid silver;
+}
+table td{
+  border-right: 2px dotted #abc;
+  width: 25%;
+  text-align: center;
+  font-style: italic;
+  font-family: monospace;
+  font-size: 20px;
+}
+.new_row{
+  border: 2px dotted #abc;
+  height: auto;
+  width: auto;
+}

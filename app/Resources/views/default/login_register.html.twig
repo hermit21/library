@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div id="panel">
+
+    <div id="panel_head">
+      <div class="login_form">
+        <a href="http://localhost/library/web/app_dev.php/login" id="login_btn" class="active">Login</a>
+      </div>
+      <div class="register_form">
+        <a href="http://localhost/library/web/app_dev.php/register" id="register_btn" class="disable">Register</a>
+      </div>
+    </div>
+
+    <div id="panel_body">
+
+    <form action="{{ path("login") }}" method="post">
+      <div class="panel_login_form">
+        <div class="form">
+          <label for="username">Username:</label>
+          <input type="text" name="username_login" id="username_login" />
+          <span id="username_loginInfo"></span>
+        </div>
+        <div class="form">
+          <label for="password">Password:</label>
+          <input type="password" id="password_login" name="password_login">
+          <span id="password_loginInfo"></span>
+        </div>
+        <div class="button_form">
+          <input type="submit" name="login" id="login" value="Login">
+        </div>
+      </div>
+    </form>
+
+      <form action=" {{ path("register") }} " method="post">
+      <div class="panel_register_form">
+        <div class="form">
+          <label for="firstname">First Name:</label>
+          <input type="text" id="firstname" name="firstname">
+          <span id="firstnameInfo"></span>
+        </div>
+        <div class="form">
+          <label for="lastname">Last Name:</label>
+          <input type="text" id="lastname" name="lastname">
+          <span id="lastnameInfo"></span>
+        </div>
+        <div class="form">
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" />
+          <span id="usernameInfo"></span>
+        </div>
+        <div class="form">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+          <span id="passwordInfo"></span>
+        </div>
+        <div class="form">
+          <label for="repeatpassword">Repeat password:</label>
+          <input type="password" id="repeatpassword" name="repeatpassword">
+          <span id="repeatpasswordInfo"></span>
+        </div>
+        <div class="button_form">
+          <input type="submit" name="register" id="register" value="Register">
+        </div>
+      </div>
+      </form>
+    </div>
+
+  </div>
+{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href=" {{ asset('css/login.css') }} "/>
+{% endblock %}
+
+{% block javascripts %}
+  <script src=" {{ asset('js/login.js') }} "></script>
+{% endblock %}

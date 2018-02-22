@@ -1,0 +1,28 @@
+{% extends 'user.html.twig' %}
+
+{% block body %}
+<form action =" {{ path("account") }} " method="post">
+  <fieldset>
+    <legend>Seach The Library</legend>
+    <div class="form">
+      <label for="title">Book title:</label>
+      <input type="text" name="title" id="title">
+    </div>
+    <div class="form">
+      <label for="author">Author:</label>
+      <input type="text" name="author" id="author">
+    <div>
+    <div class="button_form">
+      <input type="submit" name="search" id="search" value="Search">
+    </div>
+  </fieldset>
+</form>
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ asset('css/account.css') }}"/>
+{% endblock %}

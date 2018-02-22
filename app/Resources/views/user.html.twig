@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+
+        {% endblock %}
+        <link rel="stylesheet" type="text/css" href=" {{ asset('css/user.css') }} "/>
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+      <div id="menu">
+
+        <span class="btn_nav"></span>
+        <ul class="nav">
+          <li class="btn_form"><a href="http://localhost/library/web/app_dev.php/account">Home</a></li>
+          <li class="btn_form"><a href="http://localhost/library/web/app_dev.php/account/my_account">My account</a></li>
+          <li class="btn_form"><a href="http://localhost/library/web/app_dev.php/account/my_request">My request</a></li>
+          <li class="btn_form"><a href="http://localhost/library/web/app_dev.php/account/prolongue">Prolongue</a></li>
+          <li class="btn_form"><a href="http://localhost/library/web/app_dev.php/account/change_password">Change password</a></li>
+        </ul>
+
+    </div>
+
+      <div id ="panels">
+        {% block body %}
+
+        {% endblock %}
+      </div>
+        {% block javascripts %}
+        {% endblock %}
+        <script>
+          $('.btn_nav').click(function(){
+            $('ul.nav').slideToggle();
+
+          })
+          $(window).resize(function(){
+            if($(window).width() > 1309)
+            {
+              $('ul.nav').removeAttr('style');
+            }
+          })
+        </script>
+    </body>
+</html>

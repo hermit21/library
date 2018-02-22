@@ -1,0 +1,42 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+login:
+    path: /login
+    defaults: {_controller: AppBundle:Default:login}
+
+redister:
+    path: /register
+    defaults: {_controller: AppBundle:Default:register}
+
+homepage:
+    path: /
+    defaults: {_controller: AppBundle:Default:index}
+
+account:
+    path: /account
+    defaults: {_controller: AppBundle:User:account}
+
+my_account:
+    path: /account/my_account
+    defaults: {_controller: AppBundle:User:myaccount}
+
+myrequest:
+    path: /account/myrequest/book_number
+    defaults: {_controller: AppBundle:User:myrequest}
+
+prolongue:
+    path: /account/prolongue
+    defaults: {_controller: AppBundle:User:prolongue}
+
+change_password:
+    path: /account/change_password
+    defaults: {_controller: AppBundle:User:change_password}
+book:
+    path: /book
+    defaults: {_controller: AppBundle:Book:book}
+
+saved:
+    path: /book/id
+    defaults: {_controller: AppBundle:Book:saved}

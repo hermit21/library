@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+
+        {% endblock %}
+        <link rel="stylesheet" type="text/css" href=" {{ asset('css/base.css') }} "/>
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+      <div id="login_base_panel">
+        <div id="panels">
+          <li class="btn_form"><a href="http://localhost/library/web/app_dev.php/">Home</a></li>
+          <li class="btn_form"><a href="http://localhost/library/web/app_dev.php/login">Log in!</a></li>
+          <li class="btn_form"><a href="http://localhost/library/web/app_dev.php/register">Register!</a></li>
+      </div>
+        {% block body %}
+
+        {% endblock %}
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>
